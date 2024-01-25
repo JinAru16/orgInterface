@@ -1,6 +1,10 @@
 # 1. 환경 확인사항
 * 1. agentconfig.xml 진짜 사용하는 파일인지 확인할 것. -> 샘플파일 주는곳 많으니깐 실제 사용하는거 달라해야함.
-  * 1-1. agentConfig.xml 파일의 경로도 회사마다 다름 -> 넣어야하는 파일 위치도 알려달라고 해야함.
+  * 1-1. agentConfig.xml 변경해야할 경우. /sspProc/agentConfig.xml
+  * 1-2. config내에 엔터키 치면 못알아먹음 한줄로 나열해야함
+  ```
+
+  ```
 * 2. nets.sso.agent.dll도 고객사한테 받아와야 함.
 * 3. 고객사 nets 담당자에게 icm 도메인이 등록되어있는지 물어봐야함 -> 없다면 icm도메인 등록 해달라고 요청해야함.
 * 4. 방화벽 열려있는지 확인해봐야함 -> 웹서버 컴퓨터에서 명령 프롬프트 열고 nslookup http://sso.고객사.com으로 dns 서버 검색을 해봐야 함.
@@ -8,6 +12,7 @@
 * 5. LO 방식에선 iis에서 http://icm주소/ssoproc/sso_run.aspx로 다이렉트로 쏘게 하지만 nets 이용시에는
 * 6. http://icm주소/ssoproc/Default.aspx로 접근하게 해야함.
 * 7. 걔네가 주는 파일들 aspx파일들  (aspx.cs파일 말고) 최상단에 보면
+* 8. agentConfig.xml <ssoProvider ~/> 한줄로
 
 ```html
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="_Default" %>
