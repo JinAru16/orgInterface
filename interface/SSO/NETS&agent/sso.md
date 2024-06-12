@@ -38,3 +38,7 @@ if (authstatus == AuthStatus.SSOSuccess)
     Response.Redirect("sso_run.aspx", false);
 }
 ```
+# 3. 넷츠 기본 제공 aspx파일들 관련
+* ssoagent/패키지 하위에 LogonService, LogoffService 등등 기본 제공 패키지가 있는 경우
+* -> cs파일들이 빠지면 에러남. 젠킨스 빌드로 한꺼번에 말지말고 얘는 메일로 배포 따로 제공 or 실수로 같이 빌드 했을 경우
+* cs파일들만 추가로 pm에게 전달
